@@ -1,0 +1,66 @@
+:root{
+    --color-langcorrect: #6174dd;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+
+h1{
+    font-size: 4em;
+}
+
+h1,h2{
+    font-weight: bolder;
+}
+
+#welcome{
+    height: 90vh;
+    position: relative;
+}
+
+#welcome p {
+    width: 80%;
+}
+
+#skills-list{
+    columns: 2;
+    /* width: 40%; */
+}
+
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--color-langcorrect);
+}
+a:hover{
+    color:#3c4fbb;
+}
+
+#about a::after, #projects a::after {
+    font-family: "Font Awesome 5 Free";
+    content: '\f08e';
+    padding-left: 5px;
+    color: currentColor;
+}
+
+.section-wrapper{
+    padding-top: 7em;
+    padding-bottom: 7em;
+}
+
+.bg-lc{
+    background: var(--color-langcorrect);
+}
+
+#projects h2{
+    margin-bottom: 3em;
+}
+
+#contactDiv{
+    text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
