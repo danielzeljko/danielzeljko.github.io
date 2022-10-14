@@ -15,10 +15,11 @@ h1,h2{
     font-weight: bolder;
 }
 
-#welcome{
+/* TODO: see why this breaks mobile responsiveness with flex */
+/* #welcome{
     height: 90vh;
     position: relative;
-}
+} */
 
 #welcome p {
     width: 80%;

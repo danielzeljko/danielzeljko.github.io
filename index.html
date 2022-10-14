@@ -17,42 +17,48 @@
   </head>
   <body>
 
-    <!-- Nav -->
-    <div class="bg-dark py-4">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <div class="d-flex justify-content-end">
-          <ul class="nav">
+        <a class="navbar-brand text-secondary" href="#">Daniel Zeljko</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link text-secondary fw-bold" href="#about">About</a>
+              <a class="nav-link fw-bold" aria-current="page" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-secondary fw-bold" href="#projects">Projects</a>
+              <a class="nav-link fw-bold" href="#projects">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-secondary fw-bold" href="#contact">Contact</a>
+              <a class="nav-link fw-bold" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="daniel_zeljko_resume.pdf" download>Resume</a>
             </li>
           </ul>
-          <a href="daniel_zeljko_resume.pdf" class="btn btn-outline-light" download>Resume</a>
         </div>
       </div>
-    </div>
-
+    </nav>
 
     <!-- Welcome -->
-    <section class="bg-dark text-white">
+    <section class="bg-dark text-white section-wrapper">
       <div class="container">
           <div id="welcome" class="row d-flex align-items-center">
-            <div class="col-12 col-md-8 order-2 order-md-1 mt-5 mt-md-0">
+            <div class="col-12 col-md-8 order-2 order-md-1">
               <p class="fw-bold text-muted fs-5">Jr. Software Engineer</p>
               <h1>Daniel Zeljko</h1>
-              <p>Anim ad duis esse est proident ea commodo duis aute commodo sint officia velit aliqua. Consectetur ullamco eiusmod ex labore. Aliquip commodo sit tempor dolore esse enim. Id elit esse ullamco et officia labore elit pariatur culpa proident est. Commodo consectetur excepteur irure eiusmod qui amet do irure. Nulla pariatur pariatur et labore ea. Elit quis officia consectetur nulla sint anim anim ipsum.</p>
-              <div class="">
-                <a href="daniel_zeljko_resume.pdf" class="btn btn-light me-3" download>Download Resume</a>
-                <button class="btn btn-outline-light">Contact</button>
+              <p class="pb-3 intro">Currently, I am a Bootcamp student at <a href="https://www.rithmschool.com/" class="link-light" target="_blank" title="Opens Rithm School in a new tab">Rithm School</a> where I am working to solidify my foundations and learn new technologies.</p>
+              <div class="d-flex flex-wrap gap-3">
+                <a href="daniel_zeljko_resume.pdf" class="btn btn-light" download><i class="fa-regular fa-file-pdf"></i> Resume</a>
+                <a href="mailto:masemunejp@gmail.com" class="btn btn-outline-light"><i class="fa-regular fa-envelope"></i> Contact</a>
+                <a href="https://www.linkedin.com/in/daniel-zeljko/" class="btn btn-outline-light"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
               </div>
             </div>
-            <div class="col-12 col-md-4 order-1 order-md-2">
-              <img class="img-fluid" src="https://www.ateneo.edu/sites/default/files/styles/large/public/2021-11/istockphoto-517998264-612x612.jpeg?itok=aMC1MRHJ">
+            <div class="col-12 col-md-4 order-1 order-md-2 mb-5 mb-md-0">
+              <img class="img-fluid border-2 img-thumbnail" src="images/profile.webp" alt="profile">
             </div>
           </div>
       </div>
@@ -102,10 +108,10 @@
     <!-- Projects -->
     <section id="projects" class="bg-lc text-white section-wrapper">
       <div class="container">
-        <h2 class="text-center">Projects I've worked on</h2>
+        <h2 class="text-center">Projects I've Created</h2>
         <div class="row d-flex align-items-center">
           <div class="col-12 col-md-6 mb-3 mb-md-0">
-            <img src="images/langcorrect.webp" class="img-fluid">
+            <img src="images/langcorrect.webp" alt="LangCorrect" class="img-fluid">
           </div>
           <div class="col-12 col-md-6 mt-3 mt-md-0">
             <p class="fw-bold mb-2"><span class="badge text-bg-light">Featured Project</span></p>
@@ -138,7 +144,7 @@
             is always open! Whether you have a question, want to say hi, or send
             me your favorite pet photo (mandatory pet tax), I'll try my best to get back to you!
           </p>
-          <a href="mailto:masemunejp@gmail.com" class="btn btn-outline-secondary px-5">Email</a>
+          <a href="mailto:masemunejp@gmail.com" class="btn btn-outline-secondary px-5"><i class="fa-regular fa-envelope"></i> Email</a>
         </div>
       </div>
     </section>
