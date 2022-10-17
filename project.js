@@ -1,10 +1,90 @@
 "use strict";
 
-// green - school/work
-// yellow - projects
-// primary - other
+const EVENTS = [
+  {
+    date: "2022-10-17",
+    verb: "Completed the assignment",
+    object: "Meme Generator",
+    color: "color-lc",
+    link: "https://github.com/danielzeljko/meme-generator"
+  },
+  {
+    date: "2022-10-13",
+    verb: "Completed the assignment",
+    object: "Personal Website",
+    color: "color-lc",
+    link: "https://github.com/danielzeljko/danielzeljko.github.io",
+  },
+  {
+    date: "2022-09-29",
+    verb: "Admitted into",
+    object: "Rithm School",
+    color: "",
+    link: "https://www.rithmschool.com/"
+  },
+  {
+    date: "2022-09-28",
+    month: "September",
+    day: 28,
+    verb: "Attended the",
+    object: "Rithm Technical Interview",
+    color: "",
+    link: ""
+  },
+  {
+    date: "2022-09-22",
+    verb: "Applied to",
+    object: "Rithm School",
+    color: "",
+    link: ""
+  },
+  {
+    date: "2022-09-22",
+    verb: "Released",
+    object: "LangCorrect (v3)",
+    color: "",
+    link: ""
+  },
+  {
+    date: "2021-02-11",
+    verb: "Released",
+    object: "LangCorrect (v2)",
+    color: "",
+    link: ""
+  },
+  {
+    date: "2019-12-01",
+    verb: "Graduated from",
+    object: "San Francisco State University (B.A. in Japanese)",
+    color: "",
+    link: ""
+  },
+  {
+    date: "2019-10-28",
+    verb: "Released",
+    object: "LangCorrect",
+    color: "color-lc",
+    link: "https://langcorrect.com"
+  },
+  {
+    date: "2019-02-09",
+    verb: "Started coding",
+    object: "LangCorrect",
+    color: "color-lc",
+    link: ""
+  },
+  {
+    date: "2017-01-01",
+    verb: "Entered",
+    object: "San Francisco State University",
+    color: "",
+    link: ""
+  },
+];
 
-function displayYear(){
+
+/** Displays years since 2019 */
+function displayYear() {
   const yearToday = new Date().getFullYear();
   const yearSince = yearToday - 2019;
   const ele = document.getElementById("year");
@@ -13,63 +93,35 @@ function displayYear(){
 displayYear();
 
 
+/** Creates the Timeline */
+function createTimeline(events) {
+  const timeline = document.getElementById("timeline-ul");
 
-const EVENTS = [
-  {
-    year: 2022,
-    month: "September",
-    event: "Got accepted into Rithm School",
-    color: "text-success"
-  },
-  {
-    year: 2022,
-    month: "September",
-    event: "Applied for a 16 week coding bootcamp at Rithm School",
-    color: "text-primary"
-  },
-  {
-    year: 2019,
-    month: "December",
-    event: "Graduated from San Francisco State University with a B.A. in Japanese",
-    color: "text-success"
-  },
-  {
-    year: 2019,
-    month: "October",
-    event: "Officially released LangCorrect v1.0.0",
-    color: "text-danger"
-  },
-  {
-    year: 2019,
-    month: "February",
-    event: "Started coding LangCorrect",
-    color: "text-danger"
-
-  },
-  {
-    year: 2017,
-    month: "January",
-    event: "Entered San Francisco State University",
-    color: "text-success"
-  },
-]
-
-
-const timelineUl =document.getElementById("timeline-ul");
-
-function createTimeLine(events){
   events.map(event => {
-    const listItem = `<li class="row d-flex align-items-center mb-3">
-                        <div class="col-12 col-md-2">
-                        <i class="fa-solid fa-circle fa-2xs pe-1 ${event.color}"></i>
-                        ${event.month} ${event.year}
-                        </div>
-                        <div class="col-12 col-md-10">${event.event}</div>
-                      </li>`
-      timelineUl.innerHTML += listItem;
+    const eventItem = createEventItem(event);
+    timeline.innerHTML += eventItem;
   });
 }
+createTimeline(EVENTS);
 
-createTimeLine(EVENTS);
+
+/** Creates the timeline event item */
+function createEventItem(event){
+  const listItem =
+      `<li class="row d-flex align-items-center mb-3">
+        <div class="col-12 col-md-2">
+          <i class="fa-solid fa-circle fa-2xs pe-1 ${event.color}"></i>
+          ${event.date}
+        </div>
+        <div class="col-12 col-md-10">
+          <span class="verb">${event.verb}</span>
+          <span class="fw-bold ${event.color}">
+          ${ event.link ? `<a href="${event.link}" target="_blank">${event.object}</a>` : `${event.object}`}
+          </span>
+        </div>
+      </li>`;
+  return listItem;
+
+}
 
 
