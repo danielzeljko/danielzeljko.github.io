@@ -2,6 +2,13 @@
 
 const EVENTS = [
   {
+    date: "2022-10-29",
+    verb: "Completed the assignment",
+    object: "Memory Game",
+    color: "color-lc",
+    link: "https://danielzeljko.github.io/memory-game/"
+  },
+  {
     date: "2022-10-17",
     verb: "Completed the assignment",
     object: "Meme Generator",
